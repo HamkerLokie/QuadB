@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+    <title>HODLINFO</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left head-color">HODLINFO.<span class="text-color">com</span><br><span class="text-size up">Powered
+                By <span class="text-color text-size">Finstreet</span></span></div>
+        <div class="center">
+            <select name="INR" id="">
+                <option value="">INR</option>
+            </select>
+            <select name="INR" id="">
+                <% for(let i=0; i <tickers.length; i++){%>
+                    <option value="">
+                        <%= tickers[i].base_unit.toUpperCase() %>
+                    </option>
+                    <% } %>
+            </select>
+        </div>
+        <div class="right">
+            <div>50</div>
+            <a href="https://telegram.org/"><i class="fa fa-telegram" aria-hidden="true"></i>
+                Connect Telegram</a>
+            <input type="radio" value="Yes" id="">
+        </div>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Last Price</th>
+                    <th>Buy Price / Sell Price</th>
+                    <th>Volume</th>
+                    <th>Base Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <% for(var i=0; i<tickers.length ; i++) { %>
+                    <tr class="tr">
+                        <td>
+                            <%= i+1 %>
+                        </td>
+                        <td>
+                            <%= tickers[i].tname.slice(0,3) %> /
+                            <%= tickers[i].tname.slice(3, 6) %>
+                        </td>
+                        <td>
+                            <%= tickers[i].last %>
+                        </td>
+                        <td>
+                            <%= tickers[i].buy %> / <%= tickers[i].sell %>
+                        </td>
+                        <td>
+                            <%= tickers[i].volume %>
+                        </td>
+                        <td>
+                            <%= tickers[i].base_unit %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

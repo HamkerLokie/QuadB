@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #191d28;
+
+}
+
+tbody td:first-child {
+    border-radius: 10px 0 0 10px;
+}
+tbody td:last-child {
+    border-radius:  0 10px 10px 0 ;
+}
+
+
+table {
+    border-collapse:separate;
+    border-spacing: 0px 1.2em;
+    display: table;
+    width: 95%;
+    padding: 0em .6em;
+}
+.table{
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.tr {
+    color: white;
+    background: #2e3241;
+
+}
+
+tbody{
+    width: 100%;
+}
+
+th,
+td {
+    text-align: center;
+    padding:  8px;
+
+}
+td{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+
+    
+
+}
+
+th {
+    background-color: #191d28;
+    color: grey;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+
+}
+
+
+.navbar {
+    padding: .6em .9em;
+    min-height: 9vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191d28;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+
+.text-color {
+    color: white;
+    padding: 0;
+
+}
+
+.text-size {
+    padding: 0;
+    font-size: .5em;
+}
+
+.head-color {
+    color: #5dc7c2;
+    font-style: normal;
+    line-height: 80%;
+
+}
+
+
+.center select {
+    font-family: 'Oswald', sans-serif;
+    padding: .6em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #2e3241;
+    color: white;
+
+}
+
+
+.right {
+    display: flex;
+    gap: .5em;
+}
+
+.right div {
+    border-radius: 50%;
+    border: 2px solid #5dc7c2;
+    padding: .0em .3em;
+    font-size: .6em;
+    color: white;
+}
+
+.right a {
+    text-decoration: none;
+    background: #5dc7c2;
+    border-radius: 10px;
+    padding: 0em .8em;
+    font-size: .6em;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .link{
+    text-decoration: none;
+    padding: .9em 1em;
+    color: white;
+    background-color: #5dc7c2;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 10px;
+
+}
+
+.link:hover{
+    transform: scale(1.3);
+    transition: all .6s ease-in-out;
+}
+
+
+@media screen and (max-width:700px) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
